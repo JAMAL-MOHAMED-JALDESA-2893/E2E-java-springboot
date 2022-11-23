@@ -1,10 +1,15 @@
 package com.jamal.student.dal.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 @Entity
+@Table(name="studenttab")
 public class Student {
     
+	@Id
 	private Long id;
 	private String name;
 	private String course;
