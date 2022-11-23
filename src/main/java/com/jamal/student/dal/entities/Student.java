@@ -1,7 +1,10 @@
 package com.jamal.student.dal.entities;
 
-public class Student {
+import javax.persistence.Entity;
 
+@Entity
+public class Student {
+    
 	private Long id;
 	private String name;
 	private String course;
