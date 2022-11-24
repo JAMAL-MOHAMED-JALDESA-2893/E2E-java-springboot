@@ -1,5 +1,7 @@
 package com.jamal.student.dal;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,6 +25,12 @@ class StudentdalApplicationTests {
 		student.setFee(30d);
 		
 		studentRepository.save(student);
+	}
+	
+	@Test
+	public void testFindStudentById(){
+		Object student = studentRepository.findById(1l);
+		System.out.println(student);
 	}
 
 }
