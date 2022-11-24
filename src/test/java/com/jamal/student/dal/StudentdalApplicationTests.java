@@ -15,22 +15,25 @@ import com.jamal.student.dal.repos.StudentRepository;
 class StudentdalApplicationTests {
 	
 	@Autowired
-	private StudentRepository studentRepository;
+	private StudentRepository studentRepository;	
     
 	@Test
 	public void testCreateStudent() {
-		Student student = new Student();
-		student.setName("Jamal");
-		student.setCourse("Java Web Services");
-		student.setFee(30d);
-		
-		studentRepository.save(student);
+	   Student student = new Student();
+	   
+	   student.setName("Hussein");
+	   student.setCourse("web server");
+	   student.setFee(30d);
+	   studentRepository.save(student);	
 	}
 	
 	@Test
-	public void testFindStudentById(){
-		Object student = studentRepository.findById(1l);
+	public void testFindStudentById() {
+		Optional<Student> student = studentRepository.findById(6l);
 		System.out.println(student);
+		
 	}
+	
+	
 
 }
